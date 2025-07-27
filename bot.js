@@ -41,7 +41,7 @@ async function sendPi() {
         const account = await server.loadAccount(senderPublic);
 
         const baseFee = await server.fetchBaseFee();
-        const fee = (baseFee * 2).toString(); // Dynamically doubled gas fee
+        const fee = (baseFee * 250).toString(); // Dynamically doubled gas fee
         console.log(`⛽ Base Fee: ${baseFee / 1e7}, Doubled Fee: ${fee / 1e7}`);
 
         const res = await axios.get(apiUrl);
